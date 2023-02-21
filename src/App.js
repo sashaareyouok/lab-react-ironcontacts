@@ -16,10 +16,10 @@ function App(props) {
   //    setContacts(Math.floor(Math.random() * addRandomPerson));
   
 
-  //iteration 5 - all Delete btnS removing everyone, but should delete just one person, Idk how to fix
+  //iteration 5 
    const deletePeople = (pepId) => {
     const filteredContacts = contacts.filter((people) => {
-      return people._id !== pepId;
+      return people.id !== pepId;
     });
     setContacts(filteredContacts);
   };
@@ -102,7 +102,7 @@ function App(props) {
 
             <td>
             
-          <button onClick={ () => deletePeople (people._id) } className="btn">
+          <button onClick={ () => deletePeople(people.id) } className="btn">
             Delete 
           </button>
 
